@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task4</title>
+</head>
+<body>
+<h1>The sorting hat says</h1>
+<p id="result"></p>
+<script>
+  'use strict';
+  let name = prompt('What is your name?');
+  let school = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+  if (school === 1) {
+    document.querySelector('#result').innerHTML = '"' + name + ', you are Gryffindor."';
+  } else if (school === 2) {
+    document.querySelector('#result').innerHTML = '"' + name + ', you are Slytherin."';
+  } else if (school === 3) {
+    document.querySelector('#result').innerHTML = '"' + name + ', you are Hufflepuff."';
+  } else if (school === 4) {
+    document.querySelector('#result').innerHTML = '"' + name + ', you are Ravenclaw."';
+  }
+</script>
+</body>
+</html>

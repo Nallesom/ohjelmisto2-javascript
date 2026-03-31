@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task9</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  'use strict';
+  let num = prompt('Enter a number');
+  let isPrime = true;
+  if (num <= 1) {
+    isPrime = false;
+  } else {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+  }
+
+  if (isPrime) {
+    document.querySelector('#result').innerHTML = num + ' is a prime number';
+  } else if (!isPrime) {
+    document.querySelector('#result').innerHTML = num + ' is not a prime number';
+  }
+</script>
+</body>
+</html>

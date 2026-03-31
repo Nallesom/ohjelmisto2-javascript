@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task5</title>
+</head>
+<body>
+<p id="output"></p>
+<script>
+  'use strict';
+  const yearstr = prompt('Enter the year');
+  if ((yearstr % 4 === 0 && yearstr % 100 !== 0) || (yearstr % 400 === 0)) {
+    document.querySelector('#output').innerHTML = 'The year ' + yearstr + ' is a leap year';
+  } else {
+    document.querySelector('#output').innerHTML = 'The year ' + yearstr + ' is not a leap year';
+  }
+</script>
+</body>
+</html>

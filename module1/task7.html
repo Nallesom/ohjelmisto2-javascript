@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task7</title>
+</head>
+<body>
+<p id="sum"></p>
+<script>
+  'use strict';
+  const rolls = prompt('How many dice rolls?');
+  let sum = 0;
+  for (let i = 0; i < rolls; i++) {
+    sum += Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+  }
+  document.querySelector('#sum').innerHTML = 'Dice rolls sum: ' + sum;
+</script>
+</body>
+</html>

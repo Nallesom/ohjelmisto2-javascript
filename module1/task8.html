@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task8</title>
+</head>
+<body>
+<ul id="leaplist"></ul>
+<script>
+  'use strict';
+  const startyear = prompt('Enter start year');
+  const endyear = prompt('Enter end year');
+  let currentyear = startyear;
+  const ul = document.querySelector('#leaplist');
+  do {
+    // Probably faster to first round the startyear to closest prime year and do a +4 loop
+    if ((currentyear % 4 === 0 && currentyear % 100 !== 0) || (currentyear % 400 === 0)) {
+      const li = document.createElement('li');
+      li.textContent = currentyear;
+      ul.appendChild(li);
+    }
+    currentyear++;
+  } while (currentyear <= endyear);
+</script>
+</body>
+</html>
