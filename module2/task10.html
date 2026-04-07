@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='UTF-8'>
-        <title>Task10</title>
-    </head>
-    <body>
-        <ul></ul>
-        <script>
-            'use strict';
-            
-            let candidates = GetCandidates();
-            let votes = GetVotes();
-            CountVotes(candidates, votes)
-            Results(candidates);
+<head>
+    <meta charset='UTF-8'>
+    <title>Task10</title>
+</head>
+<body>
+<ul></ul>
+<script>
+  'use strict';
 
-            function GetCandidates()
-            {
-                const participants = prompt("How many candidates?");
-                let candidates = [];
-                for (let i = 0; i < participants; i++)
-                {
-                    const candidateName = prompt("Name for candidate " + (i+1));
-                    candidates.push({name: candidateName, votes: 0})
-                }
-                return candidates;
-            }
+  let candidates = GetCandidates();
+  let votes = GetVotes();
+  CountVotes(candidates, votes);
+  Results(candidates);
 
-            function GetVotes()
-            {
-                const voters = prompt("How many voters?");
-                let votes = [];
-                for (let j = 0; j < voters; j++)
-                {
-                    votes.push(prompt("Who will you vote for?"));
-                }
-                return votes;
-            }
+  function GetCandidates() {
+    const participants = prompt('How many candidates?');
+    let candidates = [];
+    for (let i = 0; i < participants; i++) {
+      const candidateName = prompt('Name for candidate ' + (i + 1));
+      candidates.push({name: candidateName, votes: 0});
+    }
+    return candidates;
+  }
 
-            function CountVotes(candidates, votes)
-            {
-                for (let candidate of candidates)
-                {
-                    for (let vote of votes)
-                    {
-                        if (candidate.name === vote)
-                        {
-                            candidate.votes += 1;
-                        }
-                    }
-                }
-            }
+  function GetVotes() {
+    const voters = prompt('How many voters?');
+    let votes = [];
+    for (let j = 0; j < voters; j++) {
+      votes.push(prompt('Who will you vote for?'));
+    }
+    return votes;
+  }
 
-            function Results(candidates)
-            {
-                let winner = '';
-                let winnerVotes = 0;
-                for (let candidate of candidates)
-                {
-                    if (candidate.votes > winnerVotes)
-                    {
-                        winner = candidate.name;
-                        winnerVotes = candidate.votes;
-                    }
-                }
+  function CountVotes(candidates, votes) {
+    for (let candidate of candidates) {
+      for (let vote of votes) {
+        if (candidate.name === vote) {
+          candidate.votes += 1;
+        }
+      }
+    }
+  }
 
-                console.log('The winner is ' + winner + ' with ' + winnerVotes + ' votes.');
-                console.log('results:');
+  function Results(candidates) {
+    let winner = '';
+    let winnerVotes = 0;
+    for (let candidate of candidates) {
+      if (candidate.votes > winnerVotes) {
+        winner = candidate.name;
+        winnerVotes = candidate.votes;
+      }
+    }
 
-                candidates.sort((a, b) => {
-                return b.votes - a.votes;
-                });
+    console.log('The winner is ' + winner + ' with ' + winnerVotes + ' votes.');
+    console.log('results:');
 
-                for (let candidate of candidates)
-                {
-                    console.log(candidate.name + ': ' + candidate.votes);
-                }
-            }
-        </script>
-    </body>
+    candidates.sort((a, b) => {
+      return b.votes - a.votes;
+    });
+
+    for (let candidate of candidates) {
+      console.log(candidate.name + ': ' + candidate.votes);
+    }
+  }
+</script>
+</body>
 </html>
