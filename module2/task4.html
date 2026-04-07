@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Task4</title>
+    </head>
+    <body>
+        <script>
+            'use strict';
+            let numbers = [];
+            while (true)
+            {
+                const input = prompt('Enter a number, enter 0 to stop');
+                numbers.push(input);
+                if (input === '0')
+                {
+                    break;
+                }
+            }
+            numbers.sort((a,b) => b-a);
+            for (let number of numbers)
+            {
+                console.log(number);
+            }
+        </script>
+    </body>
+</html>

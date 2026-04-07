@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Task8</title>
+    </head>
+    <body>
+        <p></p>
+        <script>
+            'use strict';
+            const example = ['Johnny', 'DeeDee', 'Joey', 'Marky'];
+            const p = document.querySelector('p');
+
+            const concactenated = concat(example);
+            p.innerText = concactenated;
+
+            function concat(array)
+            {
+                let str = '';
+                for (let index of array)
+                {
+                    str += index;
+                }
+                return str;
+            }
+        </script>
+    </body>
+</html>

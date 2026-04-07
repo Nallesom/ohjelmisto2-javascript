@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Task2</title>
+    </head>
+    <body>
+        <ol></ol>
+        <script>
+            'use strict';
+            const participators = prompt('How many participants?');
+            const ol = document.querySelector('ol');
+            let participants = [participators];
+            for (let i = 0; i < participators; i++)
+            {
+                participants[i] = prompt('Give participant ' + (i+1) + ' name')
+            }
+            for (let name of participants)
+            {
+                const li = document.createElement('li');
+                li.textContent = name;
+                ol.appendChild(li);
+            }
+        </script>
+    </body>
+</html>

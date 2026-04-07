@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Task9</title>
+    </head>
+    <body>
+        <ul></ul>
+        <script>
+            'use strict';
+            const numbers = [2, 7, 4, 8, 9, 5]
+            let evenNumbers = GetEvens(numbers);
+
+            console.log(numbers);
+            console.log(evenNumbers);
+
+            function GetEvens(array) 
+            { 
+                let evens = [];
+                for (let num of array)
+                {
+                    if (num % 2 === 0)
+                    {
+                        evens.push(num);
+                    }
+                }
+                return evens;
+            }
+        </script>
+    </body>
+</html>

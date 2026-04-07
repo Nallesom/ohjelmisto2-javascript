@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Task5</title>
+    </head>
+    <body>
+        <script>
+            'use strict';
+            let numbers = [];
+            while (true)
+            {
+                const input = prompt('Enter a number');
+                if (numbers.includes(input))
+                {
+                    alert('You have already entered this number!');
+                    break;
+                }
+                numbers.push(input);
+            }
+            numbers.sort((a,b) => a-b);
+            for (let number of numbers)
+            {
+                console.log(number);
+            }
+        </script>
+    </body>
+</html>
